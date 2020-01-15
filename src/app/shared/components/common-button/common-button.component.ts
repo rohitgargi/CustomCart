@@ -9,6 +9,7 @@ export class CommonButtonComponent implements OnInit {
   defaultClass: string;
   @Input('type') type: string;
   @Input('title') buttonTitle:string;
+  @Input('customClass') class:string;
   @Input('buttonSize') size :string;
   @Input('customStyles') customStyles:any;
   @Input('isTransitionRequired') isTransitionRequired: boolean;

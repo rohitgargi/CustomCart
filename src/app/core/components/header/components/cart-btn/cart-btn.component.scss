@@ -21,9 +21,7 @@
         -webkit-transform: scaleY(0.9);
         transform: scaleY(0.9);
     }
-    @include  small-screen{
-        display: inline-block;
-    }
+
 
     @include medium-screen {
         padding: 8px 15px;

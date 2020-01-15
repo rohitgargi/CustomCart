@@ -33,7 +33,8 @@
     }
 }
 .app-logo{
-    height: 41px;
+    height: 100%;
+    width: 55%;
     img{
         height: 100%;
         width: 100%;
@@ -55,7 +56,8 @@
         }
     }
     .app-logo{
-        height: 70px;
+        //height: 70px;
+        width:100%;
     }
     .plp-fig{
         height: 53%;
@@ -67,6 +69,12 @@
         width: 100%;
         height: 46%;
         @include margin($top:15px);
+    }
+
+    .app-logo{
+        img{
+            width: 80%;
+        }
     }
 }
 @include large-screen{

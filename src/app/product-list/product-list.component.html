@@ -1,15 +1,8 @@
-<div class="list-container" id="main-content" tabindex="-1">
+<div class="list-container grid" id="main-content" tabindex="-1">
     <!-- Dropdown for category for small screen -->
-
-
-
-    <!-- Dropdown for category (Mini navigation) -->
-    <app-mini-navigation [selectedTab]="selectedCategory" [tabList]="categoryList" (selectTabFn)="getFilteredProducts($event)" (buttonClick)="onCategorySelect()"></app-mini-navigation>
-
-
     <!--Main content starts here  -->
 
-    <main class="container">
+    <main class="container grid">
 
         <!-- Side tabs for Product category -->
 
@@ -30,9 +23,12 @@
         </div>
 
 
-        <div class="row list-body margin-top-0 clearfix">
 
-             <!-- Error handling -->
+        <div class="product-list-tiles grid">
+
+             <!-- Dropdown for category (Mini navigation) -->
+            <app-mini-navigation [selectedTab]="selectedCategory" [tabList]="categoryList" (selectTabFn)="getFilteredProducts($event)" (buttonClick)="onCategorySelect()"></app-mini-navigation>
+            <!-- Error handling -->
 
             <app-error [message] ="errorMsg" *ngIf="productErrorOccured"></app-error>
 
@@ -52,7 +48,7 @@
             </p>
 
             
-            <div class="padding-5 col span-1-of-4 margin-left-0" *ngFor="let product of productList">
+            <div class="padding-5 each-item margin-left-0" *ngFor="let product of productList">
 
                 <!-- Card board component comes here for product listing -->
 

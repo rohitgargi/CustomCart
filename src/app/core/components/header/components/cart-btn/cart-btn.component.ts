@@ -7,6 +7,7 @@ import { Component, OnInit, Input, ElementRef, Output, EventEmitter } from '@ang
 })
 export class CartBtnComponent implements OnInit {
   @Input('cartCount') cartCount: number;
+  @Input('customClass') customClass: string;
   @Output('toggleCart') toggleCartBtn: EventEmitter <any> = new EventEmitter();
   constructor() { }
 
