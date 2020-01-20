@@ -23,6 +23,8 @@ import { SharedModule } from './app.shared.module';
 import { CarouselComponent } from './home/components/carousel.component';
 import { RouterModule } from '@angular/router';
 import { AuthInterceptorService } from './auth.interceptor.service';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,7 @@ import { AuthInterceptorService } from './auth.interceptor.service';
     FormsModule,
     RouterModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi:true },ConstantsService,CartService], //GlobalErrorHandler
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi:true },ConstantsService,CartService, AuthGuard, AuthService], //GlobalErrorHandler
   bootstrap: [AppComponent],
 })
 export class AppModule { }

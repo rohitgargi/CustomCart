@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SignupComponent } from './signup/signup.component';
 import { ErrorComponent } from './core/components/error/error.component';
+import { AuthGuard } from './auth-guard.service';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
   },
   {
     path:'login',
+    canActivate:[AuthGuard],
     pathMatch:'full',
     component: LoginComponent
   },
