@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-mini-secondary-nav',
@@ -8,7 +8,7 @@ import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 export class MiniSecondaryNavComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
-  clickout(event) {
+  clickout(event: Event) {
     if(!this.eRef.nativeElement.contains(event.target)) {
       document.getElementById('mini-menu-navigation').classList.remove("show");
     }

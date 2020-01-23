@@ -4,6 +4,7 @@
 .nav-tabs{
     .tab-item{
         padding: 15px 10px;
+        float: none;
         list-style: none;
         cursor: pointer;
         @include font-size(80%);

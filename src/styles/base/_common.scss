@@ -59,9 +59,6 @@ body{
 .cursor-pointer{
   cursor: pointer !important;
 }
-.form-heading{
-  @include font-size(160%);
-}
 .visuallyhidden { 
   position: absolute; 
   overflow: hidden; 

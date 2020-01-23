@@ -9,6 +9,9 @@
             background-color:  lighten($color-theme,10%) !important;
         }
     }
+    .form-heading{
+        @include font-size(160%);
+    }
     .field-error{
         border-bottom: 2px solid $color-error !important;
     }
@@ -32,6 +35,7 @@
     }
     .form-desc{
         font-weight: 500;
+        line-height: 1.6;
     }
     .field-label{
         @include font-size(70%);

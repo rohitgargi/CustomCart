@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef, Renderer2, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-common-button',
   templateUrl: './common-button.component.html',
-  styleUrls: ['./common-button.component.scss']
+  styleUrls: ['./common-button.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CommonButtonComponent implements OnInit {
   defaultClass: string;

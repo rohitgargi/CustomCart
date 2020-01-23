@@ -31,6 +31,9 @@
         @include box-shadow(1px 1px 1px 1px $gs-13);
         width: 160px;
         li{
+            a{
+                text-decoration: none !important;
+            }
             @include font-size(70%);
             text-align: center;
             &:not(:last-child){

@@ -21,11 +21,13 @@
         padding: 15px;
         position: relative;
     }
-    .main-header{ 
+    .main-header{
+        flex-direction: row;
+        justify-content: space-between;
         background-color: $gs-23;
         color: $gs-1;
         @include margin(30px);
-        padding: 15px 20px;
+        padding: 5px 20px;
         @include box-shadow(0px -1px 0px 0px $gs-12);
         h1{
             @include font-size(90%);
@@ -40,9 +42,10 @@
         position: absolute;
         width: 100%;
         bottom: 6%;
+        border-radius: 0;
     }
     .cart-btn{
-        border-radius: 3px;
+        border-radius: 0;
         cursor: pointer;
         width: 100%;
         border: none;
@@ -50,6 +53,9 @@
         padding: 15px;
         @include font-size(80%);
         @include bg-opacity($color-theme);
+        button{
+            border-radius: 0;
+        }
     }
 
     @include small-screen{
